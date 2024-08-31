@@ -5,46 +5,181 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+:root {
+    --main-color-dorado: #b38728;
+    --main-color-verde: #698452;
+    --main-color-menta: #cfe0b9;
+    --main-color-blanco: #ffffff;
+}
+
 body {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin: auto;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #cfe1b9;
+    background-color: var(--main-color-blanco);
     text-align: center;
+}
+
+#bienvenida {
+    width: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 h1 {
     font-family: great vibes;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ed5a51;
+    font-size: 3rem;
+    color: var(--main-color-dorado);
 
 }
 
-.back {
+#oracion {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color-verde);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#oracion p {
+    color: var(--main-color-blanco);
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+#container img {
+    max-height: 100%;
+    max-width: 400px;
+    border-radius: 1rem;
+}
+
+.fecha {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fecha_element {
+    padding: 1rem;
+    text-align: center;
     font-weight: 600;
-    font-size: 1.5rem;
-    color: #718355;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.fecha_element:last-child {
+    border-right: none;
+}
+
+.papas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.3rem;
+    color: var(--main-color-verde);
+}
+
+.papas div {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.lugar {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--main-color-verde);
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 2rem;
+}
+
+#iglesia {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    align-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#salon {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    align-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+.lugar span {
+    color: var(--main-color-dorado);
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.direccion {
+    padding: .5rem;
+    background-color: var(--main-color-dorado);
+    border-radius: 1rem
+}
+
+.direccion a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--main-color-blanco);
+    font-size: .8rem;
+}
+
+.back {
+    font-family: great vibes;
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--main-color-dorado);
 }
 
 .countdown {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1rem;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
     width: 100%;
     max-width: 500px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: auto;
+    margin-bottom: 2rem;
 }
 
 .countdown div {
-    padding: 15px 0;
+    padding: 1rem;
     text-align: center;
-    border-right: solid 2px #000;
+    border-right: solid 2px #718355;
 }
 
 .countdown div:last-child {
@@ -54,10 +189,45 @@ h1 {
 .countdown div p {
     font-weight: 600;
     font-size: 3rem;
-    color: #718355;
+    color: var(--main-color-dorado);
 }
 
 .countdown div span {
     color: #717171;
     font-weight: 300;
+}
+
+@media only screen and (max-width: 540px) {
+
+    body {
+        width: 90%;
+    }
+
+    .fecha {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #oracion {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    #container img {
+        width: 100%;
+    }
+
+    .papas {
+        grid-template-columns: repeat(1, 1fr);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .papas div {
+        box-shadow: none;
+    }
+
+    .countdown div p {
+        font-size: 2rem;
+    }
 }
