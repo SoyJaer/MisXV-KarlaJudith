@@ -18,6 +18,7 @@
     color: var(--main-color-dorado);
     font-weight: 600;
     font-size: 2rem;
+    margin: auto;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
@@ -179,13 +180,6 @@ h1 {
     outline-offset: -3px;
 }
 
-.back {
-    font-family: great vibes;
-    font-weight: 600;
-    font-size: 3rem;
-    color: var(--main-color-dorado);
-}
-
 .countdown {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 1rem;
@@ -201,7 +195,7 @@ h1 {
 
 .countdown div {
     text-align: center;
-    border-right: solid 2px #718355;
+    border-right: solid 2px var(--main-color-dorado);
 }
 
 .countdown div:last-child {
@@ -211,12 +205,12 @@ h1 {
 .countdown div p {
     font-weight: 600;
     font-size: 3rem;
-    color: var(--main-color-dorado);
+    color: var(--main-color-verde);
 }
 
 .countdown div span {
-    color: #717171;
-    font-weight: 300;
+    color: var(--main-color-verde);
+    font-weight: 600;
 }
 
 @media only screen and (max-width: 540px) {
