@@ -116,7 +116,7 @@ h1 {
 
 .lugar {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     font-size: 1rem;
     font-weight: 600;
